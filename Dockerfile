@@ -25,7 +25,6 @@ RUN git clone https://github.com/creationix/nvm.git /opt/nvm-repo && \
     npm i -g nodemon && \
     ln -s /opt/nvm/versions/node/v0.12.2/bin/* /usr/local/bin/
 
-# Add non-root user and set as home
-RUN useradd -r -m node
+# Add non-root user
+RUN useradd -r node
 USER node
-WORKDIR /home/node
