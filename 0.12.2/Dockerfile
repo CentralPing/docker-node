@@ -20,7 +20,7 @@ RUN useradd -rm node && \
     make install && \
     make clean && \
     cd ../ && \
-    rm -rf "node-v${NODE_VERSION}&" SHASUMS256.txt && \
+    rm -rf "node-v${NODE_VERSION}*" SHASUMS256.txt && \
     npm i -g npm@"${NPM_VERSION}" && \
     npm cache clear
 
