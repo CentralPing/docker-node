@@ -2,15 +2,18 @@ FROM centralping/node:0.12.2
 
 MAINTAINER  Jason Cust <jason@centralping.com>
 
+ENV APP_DIR /var/app
+
 USER root
-RUN mkdir -p /var/app && \
-    chown -R node.node /var/app
+RUN mkdir -p ${APP_DIR} && \
+    chown -R node.node ${APP_DIR}
 
 USER node
-WORKDIR /var/app
+WORKDIR ${APP_DIR}
 
-ONBUILD COPY package.json /var/app/
-ONBUILD RUN npm i
-ONBUILD COPY . /var/app
+ONBUILD COPY package.json ${APP_DIR}
+ONBUILD RUN npm i && \
+            npm cache clear
+ONBUILD COPY . ${APP_DIR}
 
 CMD ["npm", "start"]
