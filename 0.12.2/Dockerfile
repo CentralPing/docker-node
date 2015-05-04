@@ -25,5 +25,6 @@ RUN useradd -rm node && \
     npm cache clear
 
 USER node
+WORKDIR /home/node
 
 CMD ["node"]
