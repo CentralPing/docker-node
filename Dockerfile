@@ -2,7 +2,7 @@ FROM centralping/centos:7
 
 MAINTAINER  Jason Cust <jason@centralping.com>
 
-ENV NODE_VERSION 4.4.3
+ENV NODE_VERSION 4.4.4
 ENV NPM_VERSION 3.8.9
 
 # Add non-root machine user to run node
