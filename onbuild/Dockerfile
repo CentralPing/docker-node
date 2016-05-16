@@ -1,4 +1,4 @@
-FROM centralping/node:0.12.12
+FROM centralping/node:0.12.13
 
 MAINTAINER  Jason Cust <jason@centralping.com>
 
