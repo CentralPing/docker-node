@@ -2,8 +2,8 @@ FROM centralping/centos:7
 
 MAINTAINER  Jason Cust <jason@centralping.com>
 
-ENV NODE_VERSION 6.7.0
-ENV NPM_VERSION 3.10.7
+ENV NODE_VERSION 6.8.0
+ENV NPM_VERSION 3.10.8
 
 # Add non-root machine user to run node
 #  - include home directory for npm history
