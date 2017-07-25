@@ -1,4 +1,4 @@
-FROM centralping/node:4.8.3
+FROM centralping/node:4.8.4
 
 MAINTAINER  Jason Cust <jason@centralping.com>
 
