@@ -22,7 +22,7 @@ RUN useradd -rm node && \
     cd ../ && \
     rm -rf "node-v${NODE_VERSION}" "node-v${NODE_VERSION}.tar.gz" SHASUMS256.txt && \
     npm i -g npm@"${NPM_VERSION}" && \
-    npm cache clear
+    npm cache clear --force
 
 USER node
 WORKDIR /home/node
